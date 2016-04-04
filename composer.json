@@ -1,0 +1,17 @@
+{
+    "name": "philippelattention/base_conversion",
+    "description": "Multiple conversion functions",
+    "require-dev": {
+        "phpunit/phpunit": "5.0.*"
+    },
+    "authors": [
+        {
+            "name": "Philippe L'ATTENTION",
+            "email": "philippe.lattention@hotmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"Acme\\": "src/", "Tests\\": "tests/"}
+    }
+}

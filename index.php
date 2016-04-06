@@ -2,7 +2,7 @@
 
 require 'vendor/autoload.php';
 
-$conversion = new Acme\Conversion();
+$conversion = new Tools\Conversion();
 
 echo $conversion->dec_to_bin(77868426984269842);
 

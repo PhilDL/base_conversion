@@ -3,7 +3,7 @@ namespace Tests;
 
 require 'vendor/autoload.php';
 
-use Acme\Conversion as Conversion;
+use Tools\Conversion as Conversion;
 
 class ConversionTest extends \PHPUnit_Framework_TestCase
 {
@@ -71,16 +71,14 @@ class ConversionTest extends \PHPUnit_Framework_TestCase
 
     public function testHexToBin()
     {
-        // We add ltrim because base_convert php don't show leading 0
-        
+        // J'ajoute ltrim car base_convert php n'ajoute pas les leading 0
+
         $conversion = new Conversion();
         $this->assertEquals(base_convert("70", 16, 2), $conversion->hex_to_bin("70"));
         $this->assertEquals(base_convert("70C558", 16, 2), ltrim($conversion->hex_to_bin("70C558"), 0));
 
-        // hex_to_bin alternative lookup array
+        // hex_to_bin alternative
         $this->assertEquals(base_convert("70", 16, 2), $conversion->hex_to_bin_simple("70"));
         $this->assertEquals(base_convert("70C558", 16, 2), ltrim($conversion->hex_to_bin_simple("70C558"), 0));
-
-
     }
 }
